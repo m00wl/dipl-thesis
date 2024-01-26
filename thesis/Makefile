@@ -1,4 +1,4 @@
-.PHONY: thesis clean
+.PHONY: thesis clean cleanall
 
 thesis:
 	latexmk dipl.tex

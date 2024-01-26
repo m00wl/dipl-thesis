@@ -1,12 +1,22 @@
-\documentclass[english]{tudscrreprt}
+\documentclass[english,paper=a4]{tudscrreprt}
 
 \usepackage{fontspec}
 \usepackage{babel}
 \usepackage{scrhack}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
 
 \begin{document}
 
-\input{include/coverpage.tex}
+\TUDoption{abstract}{section}
+\input{include/coverpage}
+\begin{abstract}
+  \input{include/abstract}
+\end{abstract}
+\tableofcontents
+\listoffigures
+\listoftables
+\declaration
+\confirmation
 
 \end{document}
 
