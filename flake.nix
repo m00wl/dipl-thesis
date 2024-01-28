@@ -12,7 +12,7 @@
           tex = pkgs.texlive.combine {
             inherit (pkgs.texlive)
               scheme-small latexmk tudscr newunicodechar csquotes biblatex
-              biber;
+              biber glossaries glossaries-english glossaries-extra;
           };
         in { devShells.default = pkgs.mkShell { packages = [ tex ]; }; };
     };

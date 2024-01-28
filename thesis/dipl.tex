@@ -4,26 +4,33 @@
 \usepackage{babel}
 \usepackage[babel]{microtype}
 \usepackage{scrhack}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{hyperref}
 \usepackage{csquotes}
 \usepackage[backend=biber,style=numeric]{biblatex}
-\addbibresource{lit.bib}
+\addbibresource{include/literature.bib}
+\usepackage[toc,abbreviations]{glossaries-extra}
+\makeglossaries
+\loadglsentries{include/glossary}
 
 \begin{document}
 
-\TUDoption{abstract}{section}
 \input{include/coverpage}
+
+\confirmation
+
+\TUDoption{abstract}{section}
 \begin{abstract}
   \input{include/abstract}
 \end{abstract}
 
-\confirmation
 \tableofcontents
 \listoffigures
 \listoftables
 
 \input{include/related-work}
 
+\printglossary
+\printabbreviations[title=Abbreviations]
 \printbibliography[heading=bibintoc]
 
 \end{document}
