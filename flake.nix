@@ -10,7 +10,9 @@
       perSystem = { config, self', inputs', pkgs, system, ... }:
         let
           tex = pkgs.texlive.combine {
-            inherit (pkgs.texlive) scheme-small latexmk tudscr newunicodechar;
+            inherit (pkgs.texlive)
+              scheme-small latexmk tudscr newunicodechar csquotes biblatex
+              biber;
           };
         in { devShells.default = pkgs.mkShell { packages = [ tex ]; }; };
     };
