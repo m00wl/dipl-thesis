@@ -16,12 +16,18 @@
 
 \input{include/coverpage}
 
-\confirmation
+\TUDoption{declaration}{chapter,notoc}
+\renewcaptionname{english}{\confirmationname}{Statement of Authorship}
+\begin{declarations}
+  \confirmation
+\end{declarations}
 
-\TUDoption{abstract}{section}
+\TUDoption{abstract}{chapter,notoc}
 \begin{abstract}
   \input{include/abstract}
 \end{abstract}
+
+\input{include/acknowledgments}
 
 \tableofcontents
 \listoffigures
